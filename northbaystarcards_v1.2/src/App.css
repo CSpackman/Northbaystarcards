@@ -1,0 +1,118 @@
+.intro{
+  height: 70vh;
+  background: url('header.jpg');
+  background-size: contain;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+}
+.intro h1{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10vh;
+    color: #d17002;
+}
+
+.container-no-overflow{
+  height: 100%;
+}
+
+
+.items  h1{
+  font-size: 2rem;
+  color: #32a852;
+  text-align: center;
+}
+
+.items h2{
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.items p{
+  padding: 10px;
+}
+
+
+.navbar-color{
+    background-color:transparent;
+}
+.navbar-scroll{
+  background-color: #022bbd ;
+
+}
+
+.navbar-style {
+  font-family: 'Montserrat', sans-serif;
+  /* change font herer*/
+  font-weight: 400;
+  /* Self Explanatory*/
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cart-items{
+  padding-right: 50%;
+  margin-top: 2.5%;
+}
+
+.cart-col{
+  margin: 10px;
+}
+.cart-row{
+  max-height: 40vh;
+}
+
+.cart-info h1{
+  color: blue;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 2.5%;
+
+}
+.cart-info{
+    max-width: 30%;
+    margin-left: 10%;
+}
