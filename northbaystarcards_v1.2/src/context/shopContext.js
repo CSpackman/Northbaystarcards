@@ -4,9 +4,15 @@ import Client from "shopify-buy";
 const ShopContext = React.createContext();
 
 const client = Client.buildClient({
-  storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
-  domain: "graphql.myshopify.com",
+  storefrontAccessToken: "9032bf70b61916849fe2fd029e49684f",
+  domain: "northbaystarcards.myshopify.com",
 });
+
+//dd4d4dc146542ba7763305d71d1b3d38
+//graphql.myshopify.com
+
+//northbaystarcards.myshopify.com
+//9032bf70b61916849fe2fd029e49684f
 
 class ShopProvider extends Component {
   state = {
@@ -52,15 +58,27 @@ class ShopProvider extends Component {
         quantity: parseInt(quantity, 10),
       },
     ];
+
     const checkout = await client.checkout.addLineItems(
       this.state.checkout.id,
       lineItemsToAdd
     );
+
+
     this.setState({ checkout: checkout });
     console.log(checkout);
     console.log(checkout.lineItems[0].quantity)
     console.log(checkout.lineItems.length)
   };
+
+  checkoutLineItemsRemove = async (checkoutId, lineItemIds) => {
+  client.checkout.removeLineItems(checkoutId, lineItemIds).then((checkout) => {
+  this.setState({ checkout: checkout });
+});
+
+  };
+
+
 
   fetchAllProducts = async () => {
     const products = await client.product.fetchAll();
@@ -75,12 +93,13 @@ class ShopProvider extends Component {
     return product;
   };
 
-  closeCart = () => {
-    this.setState({ isCartOpen: false });
-  };
-  openCart = () => {
-    this.setState({ isCartOpen: true });
-  };
+   addCommas(x){
+    var parts = x.toString().split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return parts.join(".");
+  }
+
+
 
   render() {
     return (
@@ -89,9 +108,9 @@ class ShopProvider extends Component {
           ...this.state,
           fetchAllProducts: this.fetchAllProducts,
           fetchProductWithId: this.fetchProductWithId,
-          closeCart: this.closeCart,
-          openCart: this.openCart,
           addItemToCheckout: this.addItemToCheckout,
+          checkoutLineItemsRemove: this.checkoutLineItemsRemove,
+          addCommas: this.addCommas,
         }}
       >
         {this.props.children}

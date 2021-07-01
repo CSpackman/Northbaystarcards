@@ -15,13 +15,9 @@ const Header = () => {
       return(
       <div>
       <Container className = "intro" fluid="100%">
+      <h1>Welcome to Northbay Starcards</h1>
       <MyNavbar colorScroll= {true} fixed = {true}/>
       </Container>
-
-
-
-
-
       </div>
 
 )

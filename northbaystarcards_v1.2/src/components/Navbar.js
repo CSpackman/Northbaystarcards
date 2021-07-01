@@ -68,7 +68,7 @@ const changeNavbarColor = () => {
       return(
       <div>
       <Navbar className= {colorChange ? 'navbar-scroll':'navbar-color'} expand="lg" fixed={fixedState()}>
-        <Navbar.Brand href="" className="navbar-style">Northbay Star Cards</Navbar.Brand>
+        <Navbar.Brand href="" className="navbar-style">Northbay Starcards</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

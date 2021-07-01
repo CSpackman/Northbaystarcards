@@ -13,7 +13,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import MyNavbar from '../../src/components/Navbar.js'
 const ProductPage = () => {
     let { id } = useParams()
-    const { fetchProductWithId, addItemToCheckout, product } = useContext(ShopContext)
+    const { fetchProductWithId, addItemToCheckout, product, addCommas } = useContext(ShopContext)
 
 
     useEffect(() => {
@@ -23,6 +23,7 @@ const ProductPage = () => {
             // setProduct(null)
         };
     }, [ fetchProductWithId, id])
+
 
 
 
@@ -46,7 +47,7 @@ const ProductPage = () => {
             </Col>
             <Col>
 
-            <h1>${product.variants[0].price}</h1>
+            <h1>${addCommas(product.variants[0].price)}</h1>
             <p>{product.description}</p>
             <Button rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
             </Col>

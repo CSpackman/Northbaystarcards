@@ -1,3 +1,4 @@
+
 .intro{
   height: 70vh;
   background: url('header.jpg');
@@ -9,20 +10,34 @@
 .intro h1{
     align-items: center;
     justify-content: center;
+    font-size: 7vw;
     text-align: center;
     padding-top: 10vh;
-    color: #d17002;
+    color: #fdb927;
+    font-family: 'Copperplate Gothic Std';
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
+
+
 
 .container-no-overflow{
   height: 100%;
 }
 
+.items{
 
+
+}
 .items  h1{
   font-size: 2rem;
-  color: #32a852;
+  color:#1d428a;
+  font-family: 'Copperplate Gothic Std';
+  font-weight: bold;
+  font-style: normal;
   text-align: center;
+
 }
 
 .items h2{
@@ -32,6 +47,9 @@
 
 .items p{
   padding: 10px;
+}
+.items-button{
+margin-top: 10px;
 }
 
 
@@ -44,10 +62,9 @@
 }
 
 .navbar-style {
-  font-family: 'Montserrat', sans-serif;
-  /* change font herer*/
-  font-weight: 400;
-  /* Self Explanatory*/
+  font-family: 'Copperplate Gothic Std';
+  font-weight: bold;
+  font-style: normal;
   font-size: 16px;
   text-transform: uppercase;
   color: #ffffff !important;

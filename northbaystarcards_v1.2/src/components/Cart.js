@@ -4,7 +4,7 @@ import {ShopContext} from '../context/shopContext'
 
 const Cart = () => {
 
-    const { checkout, fetchCheckout } = useContext(ShopContext)
+    const { checkout, fetchCheckout,  checkoutLineItemsRemove, addCommas } = useContext(ShopContext)
       var checkoutLength =0;
       var subTotal=0;
       var amountOfItems=0;
@@ -23,8 +23,9 @@ const Cart = () => {
         }
       }
       calculateSubtotal();
-      function changeQuanity(){
-        console.log("hi")
+
+      function deleteItem(checkoutId, lineItemIds){
+        checkoutLineItemsRemove(checkoutId,lineItemIds);
       }
 
 
@@ -38,24 +39,19 @@ const Cart = () => {
           {checkout.lineItems.map(item => (
            <Row key={item.id} className="cart-row">
                 <Col className="cart-col">
-                <Image src={item.variant.image.src} thumbnail/>
+                <Image src={item.variant.image.src} fluid/>
                 </Col>
                 <Col className="cart-col">
                 <h1>{item.title}</h1>
-                <h1>${item.variant.price}</h1>
-                <DropdownButton id="dropdown-basic-button" title={'Qty: ' + item.quantity}>
-                <Dropdown.Item onClick= {changeQuanity}>1</Dropdown.Item>
-                <Dropdown.Item onClick= {changeQuanity}>2</Dropdown.Item>
-                <Dropdown.Item onClick= {changeQuanity}>3</Dropdown.Item>
-                </DropdownButton>
+                <h1>${addCommas(item.variant.price)}</h1>
+                <Button variant="primary" size="lg" onClick={()=> deleteItem(checkout.id, item.id)}>Delete</Button>
               </Col>
           </Row>
         ))}
         </Col>
         <Col className="cart-info">
-        <h1>Hi</h1>
-          <h1>Subtotal({amountOfItems} Items): ${subTotal}</h1>
-            <h1>Hi</h1>
+        <br></br>
+          <h1>Subtotal({amountOfItems} Items): ${addCommas(subTotal)}</h1>
         <Button variant="primary" size="lg" block href={checkout.webUrl}>
         Checkout
       </Button>
