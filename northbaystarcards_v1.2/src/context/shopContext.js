@@ -64,11 +64,7 @@ class ShopProvider extends Component {
       lineItemsToAdd
     );
 
-
     this.setState({ checkout: checkout });
-    console.log(checkout);
-    console.log(checkout.lineItems[0].quantity)
-    console.log(checkout.lineItems.length)
   };
 
   checkoutLineItemsRemove = async (checkoutId, lineItemIds) => {
@@ -98,6 +94,8 @@ class ShopProvider extends Component {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       return parts.join(".");
   }
+
+  
 
 
 
