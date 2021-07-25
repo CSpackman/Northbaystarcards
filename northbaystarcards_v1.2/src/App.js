@@ -12,10 +12,11 @@ import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import Header from "./components/Header"
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
-
 import Cart from './components/Cart'
 import MyNavbar from '../src/components/Navbar.js'
 import ShopProvider from './context/shopContext'
+import Filter from '../src/components/Filter.js'
+import Footer from "../src/components/Footer.js"
 
 function App() {
   return (
@@ -32,8 +33,9 @@ function App() {
 
                 <Route path="/">
                 <Header />
+                <Filter />
                 <HomePage />
-          
+                <Footer />
                 </Route>
               </Switch>
             </Router>

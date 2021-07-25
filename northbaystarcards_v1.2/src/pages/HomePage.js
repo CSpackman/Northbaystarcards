@@ -12,10 +12,11 @@ import Item from "../../src/components/items.js"
 function HomePage () {
 
   let {id} = useParams();
-  const { fetchAllProducts, products, addItemToCheckout } = useContext(ShopContext)
+  const { fetchAllProducts, products, addItemToCheckout, filter } = useContext(ShopContext)
   var productsFirst=[];
   var productsSecond=[];
   var productsThird=[];
+  var allProducts;
   var [width, setWidth] = useState(window.innerWidth);
   layout();
 
@@ -33,15 +34,28 @@ function HomePage () {
 
   function layout(){
 
+    if(filter === "All"){
+         allProducts = products;
+    }
+    if(filter !== "All"){
+      allProducts =[];
+    for(var i=0; i<products.length; i++){
+      if(filter===products[i].productType){
+        allProducts.push(products[i]);
+      }
+    }
+  }
+
+
 
     if(window.innerWidth>=768&&window.innerWidth<992){
-      productsFirst = products.slice(0,products.length/2)
-      productsSecond = products.slice(products.length/2,2*products.length/2)
+      productsFirst = allProducts.slice(0,products.length/2)
+      productsSecond = allProducts.slice(products.length/2,2*products.length/2)
     }
     if(window.innerWidth>=992){
-      productsFirst = products.slice(0,products.length/3)
-      productsSecond = products.slice(products.length/3,2*products.length/3)
-      productsThird = products.slice(2*products.length/3,products.length)
+      productsFirst = allProducts.slice(0,products.length/3)
+      productsSecond = allProducts.slice(products.length/3,2*products.length/3)
+      productsThird = allProducts.slice(2*products.length/3,products.length)
     }
 
   }
@@ -52,7 +66,7 @@ function HomePage () {
             <div>
               <Container fluid>
             <Col className="md">
-            {products.map(product => (
+            {allProducts.map(product => (
               <Item product = {product} size={"18rem"}/>
               ))}
             </Col>

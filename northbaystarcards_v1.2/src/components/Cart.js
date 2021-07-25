@@ -1,10 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Button, Container, Dropdown, Collapse,  Row, Col, Image, DropdownButton } from "react-bootstrap";
+import { Button, Container, Dropdown, Collapse,  Row, Col, Image, DropdownButton, Nav } from "react-bootstrap";
 import {ShopContext} from '../context/shopContext'
+
 
 const Cart = () => {
 
-    const { checkout, fetchCheckout,  checkoutLineItemsRemove, addCommas } = useContext(ShopContext)
+    const { checkout,  checkoutLineItemsRemove, addCommas } = useContext(ShopContext)
       var checkoutLength =0;
       var subTotal=0;
       var amountOfItems=0;
@@ -39,7 +40,7 @@ const Cart = () => {
           {checkout.lineItems.map(item => (
            <Row key={item.id} className="cart-row">
                 <Col className="cart-col">
-                <Image src={item.variant.image.src} fluid/>
+                <Image src={item.variant.image.src} className="cart-items-images"/>
                 </Col>
                 <Col className="cart-col">
                 <h1>{item.title}</h1>
@@ -50,11 +51,8 @@ const Cart = () => {
         ))}
         </Col>
         <Col className="cart-info">
-        <br></br>
-          <h1>Subtotal({amountOfItems} Items): ${addCommas(subTotal)}</h1>
-        <Button variant="primary" size="lg" block href={checkout.webUrl}>
-        Checkout
-      </Button>
+        <h1>Subtotal({amountOfItems} Items): ${addCommas(subTotal)}</h1>
+        <Button variant="primary" size="lg" block href={checkout.webUrl}>Checkout</Button>
         </Col>
         </Row>
 
@@ -65,7 +63,16 @@ const Cart = () => {
     if(checkoutLength===0){
       return(
         <div>
-        Cart is empty
+
+        <Container fluid className="cart-empty">
+        <img src="cart3.svg" width="100" height="100"></img>
+        <br></br>
+          Your Cart Is Empty
+          <br></br>
+            <Nav.Link href="/" >Continue Shopping</Nav.Link>
+        </Container>
+
+
         </div>
       )
     }

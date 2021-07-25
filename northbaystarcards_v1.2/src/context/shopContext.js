@@ -19,8 +19,7 @@ class ShopProvider extends Component {
     products: [],
     product: {},
     checkout: {},
-    isCartOpen: false,
-    test: "test"
+    filter: "All"
   };
 
   componentDidMount() {
@@ -64,6 +63,8 @@ class ShopProvider extends Component {
       lineItemsToAdd
     );
 
+
+
     this.setState({ checkout: checkout });
   };
 
@@ -95,7 +96,12 @@ class ShopProvider extends Component {
       return parts.join(".");
   }
 
-  
+
+
+
+setFilter =(string) =>{
+  this.setState({filter: string});
+}
 
 
 
@@ -109,6 +115,7 @@ class ShopProvider extends Component {
           addItemToCheckout: this.addItemToCheckout,
           checkoutLineItemsRemove: this.checkoutLineItemsRemove,
           addCommas: this.addCommas,
+          setFilter: this.setFilter,
         }}
       >
         {this.props.children}

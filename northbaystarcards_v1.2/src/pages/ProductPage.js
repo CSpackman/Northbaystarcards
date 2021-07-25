@@ -11,6 +11,8 @@ import Row from 'react-bootstrap/Row'
 import Popover from 'react-bootstrap/Popover'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import MyNavbar from '../../src/components/Navbar.js'
+import AddToCartButton from '../components/AddToCartButton.js'
+
 const ProductPage = () => {
     let { id } = useParams()
     const { fetchProductWithId, addItemToCheckout, product, addCommas } = useContext(ShopContext)
@@ -28,7 +30,7 @@ const ProductPage = () => {
 
 
 
-    if (!product.title) return (<h1>Loading</h1>)
+    if (!product.title) return (<Loading />)
     return (
         <div>
         <MyNavbar colorScroll={false}/>
@@ -46,10 +48,9 @@ const ProductPage = () => {
             </Carousel>
             </Col>
             <Col>
-
             <h1>${addCommas(product.variants[0].price)}</h1>
             <p>{product.description}</p>
-            <Button rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
+            <AddToCartButton product={product} />
             </Col>
             </Row>
             </Container>

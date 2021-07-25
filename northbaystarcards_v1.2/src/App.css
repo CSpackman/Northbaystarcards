@@ -1,9 +1,7 @@
 
 .intro{
   height: 70vh;
-  background: url('header.jpg');
-  background-size: contain;
-  overflow: hidden;
+  background: url('header 2.jpg');
   position: relative;
   background-size: cover;
 }
@@ -12,7 +10,7 @@
     justify-content: center;
     font-size: 7vw;
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 25vh;
     color: #fdb927;
     font-family: 'Copperplate Gothic Std';
     font-weight: bold;
@@ -26,110 +24,188 @@
   height: 100%;
 }
 
-.items{
+/*ITEMS CSS*/
+.items {
 
+}
+
+.items-image{
+  height: 400px;
+  width: auto;
 
 }
 .items  h1{
   font-size: 2rem;
-  color:#1d428a;
+  color: Black;
   font-family: 'Copperplate Gothic Std';
   font-weight: bold;
   font-style: normal;
   text-align: center;
 
 }
-
 .items h2{
-  text-align: left;
-  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Copperplate Gothic Std';
+}
+
+.items-description{
+
 }
 
 .items p{
-  padding: 10px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
 .items-button{
 margin-top: 10px;
 }
 
+.items-button-sold{
+  margin-top: 10px;
+  background-color: #9da39e !important;
+}
 
+
+/*NAVBAR CSS*/
 .navbar-color{
-    background-color:transparent;
+    background-color:#ffffff;
+
 }
 .navbar-scroll{
-  background-color: #022bbd ;
+  background-color: #ffffff ;
 
 }
 
 .navbar-style {
-  font-family: 'Copperplate Gothic Std';
-  font-weight: bold;
+  border-bottom: 1px solid #aaa;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   font-style: normal;
   font-size: 16px;
   text-transform: uppercase;
-  color: #ffffff !important;
+  color: #808080 !important;
+  background-color: #ffffff;
 }
 
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  @media  (min-width: 1000px) {
+    .navbar-box{
+      margin-left: 15vw;
+    }
+    .navbar-link{
+      text-align: center;
+      margin: 0 auto;
+    }
   }
+
+
+
+
+
+
+/*FILTER CSS*/
+.filter{
+text-align: center;
+margin: 0 auto;
+overflow: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.filter-button {
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/*CART CSS*/
 .cart-items{
-  padding-right: 50%;
-  margin-top: 2.5%;
+
+}
+
+.cart-items h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+.cart-items-images{
+   max-width:250px;
+   max-height:250px;
+   width: auto;
+   height: auto;
 }
 
 .cart-col{
   margin: 10px;
 }
 .cart-row{
-  max-height: 40vh;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
 }
 
 .cart-info h1{
-  color: blue;
   font-size: 24px;
   text-align: center;
   margin-top: 2.5%;
+}
+
+@media  (min-width: 1000px) {
+  .cart-info{
+    max-width: 35%;
+  }
+}
+
+
+
+
+/*CART EMPTY CSS*/
+.cart-empty{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 25%;
+}
+.cart-empty img{
+  margin-bottom: 10px;
+}
+
+/*FOOTER*/
+
+.footer{
+  border-top: 1px solid #aaa;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #878787;
+}
+
+.footer a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #878787;
+  font-size: 18px;
+}
+
+.footer h1{
+  font-size: 30px;
+}
+
+.footer p{
+  font-size: 18px;
+}
+
+.footer-col{
 
 }
-.cart-info{
-    max-width: 30%;
-    margin-left: 10%;
+
+
+
+.loading h1{
+  color: black;
+  opacity: 50%;
+  float: "left";
+  margin-right: "30px" ;
 }
