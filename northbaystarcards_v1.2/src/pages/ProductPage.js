@@ -12,7 +12,7 @@ import Popover from 'react-bootstrap/Popover'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import MyNavbar from '../../src/components/Navbar.js'
 import AddToCartButton from '../components/AddToCartButton.js'
-
+import Footer from "../components/Footer.js"
 const ProductPage = () => {
     let { id } = useParams()
     const { fetchProductWithId, addItemToCheckout, product, addCommas } = useContext(ShopContext)
@@ -54,7 +54,10 @@ const ProductPage = () => {
             </Col>
             </Row>
             </Container>
+            <br></br>
+            <Footer />
             </div>
+
     )
 }
 

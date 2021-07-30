@@ -10,7 +10,7 @@ import Nav from 'react-bootstrap/Nav'
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 
 import Header from "./components/Header"
-import HomePage from './pages/HomePage'
+import ProductSection from './pages/ProductSection'
 import ProductPage from './pages/ProductPage'
 import Cart from './components/Cart'
 import MyNavbar from '../src/components/Navbar.js'
@@ -34,9 +34,10 @@ function App() {
                 <Route path="/">
                 <Header />
                 <Filter />
-                <HomePage />
+                <ProductSection />
                 <Footer />
                 </Route>
+                
               </Switch>
             </Router>
   </ShopProvider>

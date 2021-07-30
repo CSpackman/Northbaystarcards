@@ -12,7 +12,7 @@ const Header = () => {
       <Container fluid className="footer">
       <Row>
       <Col className="footer-col" md>
-      <h1>Northbay Starcards</h1>
+      <h1>NORTHNAY STARCARDS</h1>
       <p>Founder: Jeff Spackman</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
       </Col>

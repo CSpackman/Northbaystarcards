@@ -94,7 +94,7 @@ const changeNavbarColor = () => {
         <h5>Jeff Spackman</h5>
         <a href="tel:650-465-1398">Phone: (650) 465-1398</a>
         <br></br>
-        <a href = "mailto: jeff.spackman@gmail.com">Email: jeff.spackman@gmail.com</a>
+        <a href = "mailto: jeff.spackman@gmail.com">Email: jeffspackman21@gmail.com</a>
         </Modal.Body>
         <Modal.Footer>
 

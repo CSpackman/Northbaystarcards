@@ -1,4 +1,6 @@
 
+/*INTRO CSS*/
+
 .intro{
   height: 70vh;
   background: url('header 2.jpg');
@@ -25,22 +27,29 @@
 }
 
 /*ITEMS CSS*/
-.items {
+
+.items{
 
 }
-
 .items-image{
-  height: 400px;
-  width: auto;
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  object-position:50% 50%;
 
 }
-.items  h1{
-  font-size: 2rem;
-  color: Black;
+.items-title{
+  height: 50px;
+  overflow: hidden;
+}
+
+.items-title h1{
+  font-size: 34px;
   font-family: 'Copperplate Gothic Std';
   font-weight: bold;
   font-style: normal;
   text-align: center;
+  color: Black;
 
 }
 .items h2{
@@ -48,14 +57,13 @@
   font-family: 'Copperplate Gothic Std';
 }
 
-.items-description{
 
-}
 
 .items p{
  white-space: nowrap;
  overflow: hidden;
  text-overflow: ellipsis;
+
 }
 .items-button{
 margin-top: 10px;
@@ -89,15 +97,13 @@ margin-top: 10px;
 }
 
 
-  @media  (min-width: 1000px) {
-    .navbar-box{
-      margin-left: 15vw;
-    }
+  @media  (min-width: 992px) {
     .navbar-link{
-      text-align: center;
-      margin: 0 auto;
+   width:25vw;
+   text-align:center;
     }
   }
+
 
 
 
@@ -170,7 +176,7 @@ overflow: auto;
   margin-bottom: 10px;
 }
 
-/*FOOTER*/
+/*FOOTER CSS*/
 
 .footer{
   border-top: 1px solid #aaa;
@@ -197,11 +203,8 @@ overflow: auto;
   font-size: 18px;
 }
 
-.footer-col{
 
-}
-
-
+/*LOADING CSS*/
 
 .loading h1{
   color: black;

@@ -10,19 +10,21 @@ import AddToCartButton from '../components/AddToCartButton.js'
 const Item = ({product, size}) => {
 const {addCommas, addItemToCheckout} = useContext(ShopContext)
   return(
-    <Container className="items">
-    <Card style = {{ width: size }} >
-      <Card.Img className="items-image" src={product.images[0].src}/>
+    <div className="items">
+    <Card style = {{ width: size, height:"630px"}} >
+      <Card.Img  thumbnail className="items-image" src={product.images[0].src}/>
+        <div className="items-title">
         <h1>{product.title}</h1>
+        </div>
         <h2>${addCommas(product.variants[0].price)}</h2>
         <p>{product.description}</p>
          <Link to={`/product/${product.id}`}>
-          <Button  rounded="0" shadow="3" bg="black500"  block >More Details</Button>
+          <Button className="items-button" block >More Details</Button>
           </Link>
-          <AddToCartButton product={product} />
+          <AddToCartButton  product={product} />
     </Card>
     <br></br>
-    </Container>
+    </div>
   )
 
 
