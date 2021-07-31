@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react'
-import { Button, Container, Dropdown, Collapse,  Row, Col, Image, DropdownButton, Nav } from "react-bootstrap";
+import React, { useContext} from 'react'
+import { Button, Container,  Row, Col, Image, Nav } from "react-bootstrap";
 import {ShopContext} from '../context/shopContext'
 
 

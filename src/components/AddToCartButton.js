@@ -1,21 +1,22 @@
 import '../App.css';
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import {Button} from 'react-bootstrap'
 import { ShopContext } from '../context/shopContext'
 
 
 
 const AddToCartButton = ({product}) => {
-const { addItemToCheckout, checkout, checkQuantity} = useContext(ShopContext)
+const { addItemToCheckout, checkout} = useContext(ShopContext)
+var length;
 
 function check(){
   try{
-    var length=checkout.lineItems.length;
+     length=checkout.lineItems.length;
   }catch{
-    var length =0;
+     length =0;
   }
 for( var i=0; i<length; i++){
-    if(checkout.lineItems[i].title == product.title){
+    if(checkout.lineItems[i].title === product.title){
       return false
     }
 }

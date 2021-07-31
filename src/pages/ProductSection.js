@@ -1,18 +1,15 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {ShopContext} from '../context/shopContext'
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Image from 'react-bootstrap/Image'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Item from "../../src/components/items.js"
 
 function HomePage () {
 
   let {id} = useParams();
-  const { fetchAllProducts, products, addItemToCheckout, filter } = useContext(ShopContext)
+  const { fetchAllProducts, products, filter } = useContext(ShopContext)
   var productsFirst=[];
   var productsSecond=[];
   var productsThird=[];

@@ -1,14 +1,5 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Image from 'react-bootstrap/Image';
-import Card from 'react-bootstrap/Card';
-import Client from 'shopify-buy';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
-
 import Header from "./components/Header"
 import ProductSection from './pages/ProductSection'
 import ProductPage from './pages/ProductPage'
@@ -37,7 +28,7 @@ function App() {
                 <ProductSection />
                 <Footer />
                 </Route>
-                
+
               </Switch>
             </Router>
   </ShopProvider>

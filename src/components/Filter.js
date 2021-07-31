@@ -1,8 +1,7 @@
 import '../App.css';
-import React, { useEffect, useState, useContext } from 'react'
-import {Navbar, Nav, Button, NavDropdown, Form, FormControl, Container} from 'react-bootstrap'
+import React, { useContext } from 'react'
+import {Navbar, Nav, Button} from 'react-bootstrap'
 import { ShopContext } from '../context/shopContext'
-import { Link, useParams } from 'react-router-dom'
 
 
 const Filter = () => {

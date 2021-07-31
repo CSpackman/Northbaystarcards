@@ -1,14 +1,6 @@
 import '../App.css';
-import React, { useEffect, useState, useContext } from 'react'
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Image from 'react-bootstrap/Image';
-import Card from 'react-bootstrap/Card';
-import Client from 'shopify-buy';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import {Modal, ModalHeader, ModalTitle, ModalBody} from 'react-bootstrap'
+import React, { useState, useContext } from 'react'
+import {Modal,Navbar, Nav} from 'react-bootstrap'
 import {ShopContext} from '../context/shopContext'
 
 const MyNavbar = ({colorScroll, fixed}) => {
@@ -35,17 +27,18 @@ function calculateAmount(){
 calculateAmount();
 
 
- const [colorChange, setColorchange] = useState(false);
+
 var sticky
 function fixedState(){
-  if(fixed==true){
-    var sticky= "top"
+  if(fixed===true){
+     sticky= "top"
   }else{
-    var sticky ="";
+     sticky ="";
   }
   return sticky;
 }
 /*
+const [colorChange, setColorchange] = useState(false);
 useEffect(() =>{
   if(colorScroll==true){
     window.addEventListener('scroll', changeNavbarColor)
@@ -95,6 +88,8 @@ const changeNavbarColor = () => {
         <a href="tel:650-465-1398">Phone: (650) 465-1398</a>
         <br></br>
         <a href = "mailto: jeff.spackman@gmail.com">Email: jeffspackman21@gmail.com</a>
+        <br></br>
+        <a href = "https://www.ebay.com/usr/live2sell2buy?_trksid=p2047675.l2559">Ebay: live2sell2buy </a>
         </Modal.Body>
         <Modal.Footer>
 
