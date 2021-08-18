@@ -1,0 +1,293 @@
+
+/*INTRO CSS*/
+
+.intro{
+  height: 70vh;
+  background: url('header 2.jpg');
+  position: relative;
+  background-size: cover;
+}
+.intro h1{
+    align-items: center;
+    justify-content: center;
+    font-size: 7vw;
+    text-align: center;
+    padding-top: 25vh;
+    color: #fdb927;
+    font-family: 'Copperplate Gothic Std';
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+
+
+.container-no-overflow{
+  height: 100%;
+}
+
+/*When NO Items Availiable*/
+.outOfStock{
+  height: 50vh;
+}
+.outOfStock h1{
+  padding-top: 15vh;
+  text-align: center;
+  font-family: 'Copperplate Gothic Std';
+  font-weight: lighter;
+  font-style: normal;
+  color: #808080;
+}
+
+
+/*ITEMS CSS*/
+
+.items{
+height: 700px;
+
+}
+.items-image{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  object-position:50% 50%;
+}
+.items-title{
+  height: 100px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  color: Black;
+  text-transform: uppercase;
+}
+
+
+.items-price{
+  text-align: center;
+  font-family: 'Copperplate Gothic Std';
+
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+
+.items-buttons{
+height: 95px;
+
+}
+
+
+.items-button{
+margin-top: 10px;
+}
+
+.items-button-sold{
+  margin-top: 10px;
+  background-color: #9da39e !important;
+}
+
+
+/*NAVBAR CSS*/
+.navbar-color{
+    background-color:#ffffff;
+
+}
+.navbar-scroll{
+  background-color: #ffffff ;
+
+}
+
+.navbar-style {
+  border-bottom: 1px solid #aaa;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #808080 !important;
+  background-color: #ffffff;
+}
+
+
+  @media  (min-width: 992px) {
+    .navbar-link{
+   width:20vw;
+   text-align:center;
+    }
+  }
+
+
+
+
+
+
+
+/*FILTER CSS*/
+.filter{
+text-align: center;
+margin: 0 auto;
+overflow: auto;
+
+
+}
+
+
+
+.filter-button {
+  cursor: pointer;
+  background-color: #3b3a39;
+  color: #fdb927;
+  width: 125px;
+  font-weight: bold;
+}
+
+
+/*CART CSS*/
+.cart-items{
+
+}
+
+.cart-items h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+.cart-items-images{
+   max-width:250px;
+   max-height:250px;
+   width: auto;
+   height: auto;
+}
+
+.cart-col{
+  margin: 10px;
+}
+.cart-row{
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+.cart-info h1{
+  font-size: 24px;
+  text-align: center;
+  margin-top: 2.5%;
+}
+
+@media  (min-width: 992px) {
+  .cart-info{
+    max-width: 35%;
+  }
+}
+.carousel{
+  border: 2px solid #555;
+}
+
+@media  (min-width: 992px){
+  .product-section-image{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    object-fit: scale-down;
+  }
+  .product-section-carousel{
+      width: 50vw;
+      height: 70vh;
+  }
+}
+
+@media  (max-width: 992px){
+  .product-section-image img{
+    height: 70vh;
+
+  }
+  .product-section-carousel{
+    width: 50vw;
+    height: 70vh;
+  }
+}
+
+
+.product-section{
+    font-family: 'Copperplate Gothic Std';
+}
+
+
+
+/*CART EMPTY CSS*/
+.cart-empty{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 25%;
+}
+.cart-empty img{
+  margin-bottom: 10px;
+}
+
+/*FOOTER CSS*/
+
+.footer{
+  border-top: 1px solid #aaa;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #878787;
+}
+
+.footer a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #878787;
+  font-size: 18px;
+}
+
+.footer h1{
+  font-size: 30px;
+}
+
+.footer p{
+  font-size: 18px;
+}
+
+
+/*LOADING CSS*/
+
+.loading h1{
+  color: black;
+  opacity: 50%;
+  float: "left";
+  margin-right: "30px" ;
+}
+
+
+.carousel-control-next-icon{
+    background: url('arrow-right-circle-fill.svg');
+    height: 20px;
+    width: 20px;
+}
+
+.carousel-control-prev-icon{
+  background: url('arrow-left-circle-fill.svg');
+  height: 20px;
+  width: 20px;
+}
+
+.aboutUs h1{
+  text-align: center;
+  font-family: 'Copperplate Gothic Std';
+  text-shadow: .5px 0 0 #000, 0 -.5px 0 #000, 0 .5px 0 #000, -.5px 0 0 #000;
+  color: #fdb927;
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutUs{
+
+}
+.aboutUs-jumbo{
+
+}
