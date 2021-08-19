@@ -1,7 +1,7 @@
 import React, { useContext} from 'react'
 import { Button, Container,  Row, Col, Image, Nav } from "react-bootstrap";
 import {ShopContext} from '../context/shopContext'
-
+import Footer from '../components/Footer.js';
 
 const Cart = () => {
 
@@ -35,7 +35,7 @@ const Cart = () => {
     if (checkoutLength>0) {
         return (
         <div>
-        <Container fluid>
+        <Container fluid className="cart">
         <Row noGutters>
         <Col className="cart-items" lg={true}>
           {checkout.lineItems.map(item => (
@@ -46,7 +46,7 @@ const Cart = () => {
                 <Col className="cart-col">
                 <h1>{item.title}</h1>
                 <h1>${addCommas(item.variant.price)}</h1>
-                <Button variant="primary" size="lg" onClick={()=> deleteItem(checkout.id, item.id)}>Remove From Cart</Button>
+                <Button className="cart-remove-button" size="lg" onClick={()=> deleteItem(checkout.id, item.id)}>Remove From Cart</Button>
               </Col>
           </Row>
         ))}
@@ -59,6 +59,7 @@ const Cart = () => {
 
         </Container>
 
+        <Footer/>
       </div>
       )
     }
@@ -74,7 +75,7 @@ const Cart = () => {
             <Nav.Link href="/" >Continue Shopping</Nav.Link>
         </Container>
 
-
+        <Footer/>
         </div>
       )
     }

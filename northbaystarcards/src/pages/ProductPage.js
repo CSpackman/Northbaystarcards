@@ -34,7 +34,7 @@ const ProductPage = () => {
         <MyNavbar colorScroll={false}/>
         <Container className="container-no-overflow">
           <br></br>
-          <h1>{product.title}</h1>
+          <h1 className="product-section">{product.title}</h1>
           <Row>
           <Col>
           <Carousel className="carousel" indicators={true} prevIcon ={<span aria-hidden="true" className="carousel-control-prev-icon" />}nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />}>
@@ -48,7 +48,7 @@ const ProductPage = () => {
             </Carousel>
             </Col>
             <Col>
-            <h1>${addCommas(product.variants[0].price)}</h1>
+            <h1 className="product-section">${addCommas(product.variants[0].price)}</h1>
             <p>{product.description}</p>
             <AddToCartButton product={product} />
             </Col>

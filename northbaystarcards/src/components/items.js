@@ -9,10 +9,10 @@ import AddToCartButton from '../components/AddToCartButton.js'
 
 const Item = ({product, size}) => {
   function nameLength(){
-    if(product.title.length>40){
-      var productTitle=product.title.substring(0,37)+"...";
+    if(product.title.length>75){
+      var productTitle=product.title.substring(0,72)+"...";
       return(productTitle);
-    }if(product.title.length>!40){
+    }if(product.title.length>!75){
     return(product.title);
   }
   }
