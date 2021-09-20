@@ -55,7 +55,6 @@ const ProductPage = () => {
             </Row>
             </Container>
             <br></br>
-            <Footer />
             </div>
 
     )

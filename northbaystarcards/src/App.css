@@ -20,6 +20,16 @@
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
+.intro h2{
+  padding-top: 10vh;
+  color: #fdb927;
+  font-family: 'Copperplate Gothic Std';
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
 
 
 .container-no-overflow{
@@ -266,9 +276,9 @@ overflow: auto;
 }
 
 .footer h1{
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
+  font-weight: 600;
   font-style: normal;
 }
 

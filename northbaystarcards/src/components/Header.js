@@ -11,7 +11,7 @@ const Header = () => {
       <br></br>
       <Container className = "intro" fluid>
       <h1>Welcome to Northbay Starcards</h1>
-      <h2>THIS IS A BETA!!</h2>
+      <h2>BUY-SELL-TRADE</h2>
       </Container>
       </div>
 
