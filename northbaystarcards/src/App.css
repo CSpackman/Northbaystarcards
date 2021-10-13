@@ -324,6 +324,7 @@ overflow: auto;
   font-weight: lighter;
   font-style: normal;
 }
-.aboutUs-jumbo{
+.aboutUs-col{
+  padding-right: 5px;
 
 }

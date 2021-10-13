@@ -14,12 +14,14 @@ const Header = () => {
       <Col className="footer-col" md>
       <h1>NorthBay StarCards</h1>
       <p>Founder: Jeff Spackman</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+      <p>Phone: (650) 465-1398</p>
+      <p>Email: jeffspackman21@gmail.com</p>
       </Col>
 
       <Col className="footer-col" md>
-      <h1>Text </h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+      <h1>Fast, Reliable </h1>
+      <p>NorthBay StarCards has been a family buissness selling and trading cards for over the past 30 years!! </p>
+      <p>Serving the Bay Area and the entire United States!</p>
       </Col>
 
       <Col md>

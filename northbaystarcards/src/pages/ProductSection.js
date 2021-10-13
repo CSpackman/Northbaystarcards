@@ -85,12 +85,12 @@ function HomePage () {
           <Container fluid>
           <Row>
               <Col className="md">
-              {productsFirst.map(product => (
+              {productsSecond.map(product => (
                 <Item product = {product} size={"18rem"}/>
                 ))}
               </Col>
               <Col className="md">
-              {productsSecond.map(product => (
+              {productsFirst.map(product => (
                 <Item product = {product} size={"18rem"}/>
                 ))}
               </Col>
@@ -106,7 +106,7 @@ return(
       <Container fluid>
       <Row>
           <Col className="md">
-          {productsFirst.map(product => (
+          {productsThird.map(product => (
             <Item product = {product} size={"18rem"}/>
             ))}
           </Col>
@@ -116,7 +116,7 @@ return(
             ))}
           </Col>
           <Col className="md">
-          {productsThird.map(product => (
+          {productsFirst.map(product => (
             <Item product = {product} size={"18rem"}/>
             ))}
           </Col>
