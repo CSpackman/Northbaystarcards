@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/shopContext'
 
-import Image from 'react-bootstrap/Image'
+
 import Loading from '../components/Loading'
 import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
@@ -10,7 +10,7 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import MyNavbar from '../../src/components/Navbar.js'
 import AddToCartButton from '../components/AddToCartButton.js'
-import Footer from "../components/Footer.js"
+
 const ProductPage = () => {
     let { id } = useParams()
     const { fetchProductWithId, product, addCommas } = useContext(ShopContext)

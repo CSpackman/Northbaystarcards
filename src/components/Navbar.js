@@ -5,7 +5,7 @@ import {ShopContext} from '../context/shopContext'
 
 const MyNavbar = ({colorScroll, fixed}) => {
 var checkoutLength=0;
-var amountOfItems =0;
+var amountOfItems = 0;
 const { checkout } = useContext(ShopContext)
 const [show, setShow] = useState(false);
 const handleClose = () => setShow(false);
@@ -25,6 +25,8 @@ function calculateAmount(){
   }
 }
 calculateAmount();
+
+
 
 
 
@@ -75,7 +77,7 @@ const changeNavbarColor = () => {
             <Nav.Link className="navbar-link"  href="/" >Home</Nav.Link>
             <Nav.Link className="navbar-link"href="/aboutUs">About Us</Nav.Link>
               <Nav.Link className="navbar-link"  onClick={handleShow} >Contact</Nav.Link>
-            <Nav.Link className="navbar-link"href="/cart">Cart: {amountOfItems}</Nav.Link>
+            {/* <Nav.Link className="navbar-link"href="/cart">Cart: {amountOfItems}</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

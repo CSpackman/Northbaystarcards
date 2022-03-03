@@ -83,7 +83,7 @@ height: 700px;
 
 
 .items-buttons{
-height: 95px;
+height: 60px;
 font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-weight: lighter;
@@ -127,7 +127,7 @@ font-style: normal;
 
   @media  (min-width: 992px) {
     .navbar-link{
-   width:20vw;
+   width:25vw;
    text-align:center;
     }
   }
@@ -161,9 +161,7 @@ overflow: auto;
 
 
 /*CART CSS*/
-.cart-items{
 
-}
 
 .cart-items h1{
   font-family: 'Montserrat', sans-serif;
@@ -186,9 +184,7 @@ overflow: auto;
   border-bottom: 1px solid #aaa;
 }
 
-.cart-remove-button{
 
-}
 
 .cart{
   padding-bottom: 50vh;

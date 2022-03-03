@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row'
 import MyNavbar from '../components/Navbar.js'
 import Footer from '../components/Footer.js'
 import Image from 'react-bootstrap/Image'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 import Profile from '../profilePic.jpg'
 function AboutUs () {
 
