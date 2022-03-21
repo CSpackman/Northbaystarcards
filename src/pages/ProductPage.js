@@ -50,7 +50,7 @@ const ProductPage = () => {
             <Col>
             <h1 className="product-section">${addCommas(product.variants[0].price)}</h1>
             <p>{product.description}</p>
-            <AddToCartButton product={product} />
+            {/* <AddToCartButton product={product} /> */}
             </Col>
             </Row>
             </Container>
