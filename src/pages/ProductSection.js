@@ -28,6 +28,15 @@ function HomePage () {
       const resize = () => {
         setWidth(window.innerWidth);
     };
+  function splitArray(size,input_list){    
+    let result = [];
+    
+    while(input_list.length) {
+        result.push(this.splice(0, size));
+    }
+        
+    return result;
+  }
 
   function layout(){
 
@@ -46,14 +55,14 @@ function HomePage () {
 
 
     if(window.innerWidth>=768&&window.innerWidth<992){
-      productsFirst = allProducts.slice(0,products.length/2)
-      productsSecond = allProducts.slice(products.length/2,2*products.length/2)
+      productsFirst = allProducts.slice(0,allProducts.length/2)
+      productsSecond = allProducts.slice(allProducts.length/2,2*allProducts.length/2)
       console.log(productsFirst)
     }
     if(window.innerWidth>=992){
-      productsFirst = allProducts.slice(0,products.length/3+1)
-      productsSecond = allProducts.slice(products.length/3,2*products.length/3)
-      productsThird = allProducts.slice(2*products.length/3,products.length)
+      productsFirst = allProducts.slice(0,allProducts.length/3)
+      productsSecond = allProducts.slice(allProducts.length/3,2*allProducts.length/3)
+      productsThird = allProducts.slice(2*allProducts.length/3,allProducts.length)
     }
 
   }

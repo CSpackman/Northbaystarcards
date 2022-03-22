@@ -19,6 +19,7 @@ const { setFilter } = useContext(ShopContext);
     <Button  variant="light" className="filter-button" onClick={()=>setFilter("Basketball")}>Basketball</Button>
     <Button  variant="light" className="filter-button"onClick={()=>setFilter("Baseball")}>Baseball</Button>
     <Button  variant="light" className="filter-button"onClick={()=>setFilter("Memorabilia")}>Memorabilia</Button>
+    <Button  variant="light" className="filter-button"onClick={()=>setFilter("Sold")}>Sold</Button>
     </Nav>
     </Navbar>
     </div>
