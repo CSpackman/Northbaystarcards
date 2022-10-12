@@ -44,7 +44,7 @@ const {addCommas} = useContext(ShopContext)
          <Link to={`/product/${product.id}`}>
           <Button className="items-button" block >More Details</Button>
           </Link>
-          {/* <AddToCartButton  product={product} /> */}
+          <AddToCartButton  product={product} />
           </div>
     </Card>
     <br></br>

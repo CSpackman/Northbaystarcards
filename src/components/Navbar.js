@@ -77,7 +77,7 @@ const changeNavbarColor = () => {
             <Nav.Link className="navbar-link"  href="/" >Home</Nav.Link>
             <Nav.Link className="navbar-link"href="/aboutUs">About Us</Nav.Link>
               <Nav.Link className="navbar-link"  onClick={handleShow} >Contact</Nav.Link>
-            {/* <Nav.Link className="navbar-link"href="/cart">Cart: {amountOfItems}</Nav.Link> */}
+            <Nav.Link className="navbar-link"href="/cart">Cart: {amountOfItems}</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
