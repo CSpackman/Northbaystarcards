@@ -19,6 +19,7 @@ function HomePage () {
 
   useEffect(() => {
           fetchAllProducts()
+          console.log("products", products) 
 
             window.addEventListener('resize',resize)
           return () => {
@@ -28,6 +29,7 @@ function HomePage () {
       const resize = () => {
         setWidth(window.innerWidth);
     };
+
   function splitArray(size,input_list){    
     let result = [];
     

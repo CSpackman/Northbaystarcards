@@ -35,16 +35,16 @@ const {addCommas} = useContext(ShopContext)
         <h>{nameLength()}</h>
         </div>
         <div className="items-price">
-        <h>${addCommas(product.variants[0].price)}</h>
+        <h>${addCommas(product.variants[0].price.amount)}</h>
         </div>
         <div className="items-description">
 
         </div>
         <div className="items-buttons">
-         <Link to={`/product/${product.id}`}>
-          <Button className="items-button" block >More Details</Button>
+         <Link to={`/product/${product.id.toString().slice(22)}`}>
+          <Button onClick={()=>{console.log("product id", product.id)}} className="items-button" block >More Details</Button>
           </Link>
-          <AddToCartButton  product={product} />
+          <AddToCartButton  product={product} sold={product.availableForSale} />
           </div>
     </Card>
     <br></br>

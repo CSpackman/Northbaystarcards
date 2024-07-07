@@ -10,14 +10,16 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import MyNavbar from '../../src/components/Navbar.js'
 import AddToCartButton from '../components/AddToCartButton.js'
+import { Button } from 'react-bootstrap'
 
 const ProductPage = () => {
-    let { id } = useParams()
+    let {id} = useParams()
     const { fetchProductWithId, product, addCommas } = useContext(ShopContext)
 
 
     useEffect(() => {
-        fetchProductWithId(id)
+        fetchProductWithId(`gid://shopify/Product/${id}`)
+        console.log("product page", product)
         // fetchData()
         return () => {
             // setProduct(null)
@@ -28,7 +30,7 @@ const ProductPage = () => {
 
 
 
-    if (!product.title) return (<Loading />)
+    if (product?.title == null) return (<Loading />)
     return (
         <div className="product-section">
         <MyNavbar colorScroll={false}/>
@@ -48,7 +50,7 @@ const ProductPage = () => {
             </Carousel>
             </Col>
             <Col>
-            <h1 className="product-section">${addCommas(product.variants[0].price)}</h1>
+            <h1 className="product-section">${addCommas(product.variants[0].price.amount)}</h1>
             <p>{product.description}</p>
             <AddToCartButton product={product} />
             </Col>

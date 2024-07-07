@@ -5,11 +5,16 @@ import { ShopContext } from '../context/shopContext'
 
 
 
-const AddToCartButton = ({product}) => {
+const AddToCartButton = ({product, sold}) => {
 const { addItemToCheckout, checkout} = useContext(ShopContext)
 var length;
 
 function check(){
+  if (!sold){
+    console.log("sold", sold)
+    return false;
+  }
+
   try{
      length=checkout.lineItems.length;
   }catch{
@@ -27,7 +32,13 @@ for( var i=0; i<length; i++){
 if(check()){
   return(
     <div>
-    <Button className="items-button" m={{ y: '2rem' }} block onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
+    <Button className="items-button" m={{ y: '2rem' }} block onClick={() => {
+      console.log("product", product)
+      addItemToCheckout(product.variants[0].id, 1)
+  
+      
+      // addItemToCheckout(product.id, 1)
+    }}>Add To Cart</Button>
     </div>
   )
 }else{
